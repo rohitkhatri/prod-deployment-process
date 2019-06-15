@@ -6,4 +6,4 @@ before_install:
   - docker build -t rohitkhatri/react-app:dev -f Dockerfile.dev .
 
 script:
-  - docker run rohitkhatri/react-app:dev npm run tests -- --coverage
+  - docker run rohitkhatri/react-app:dev npm run test -- --coverage
