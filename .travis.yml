@@ -6,8 +6,7 @@ before_install:
   - docker build -t rohitkhatri/react-app:dev -f Dockerfile.dev .
 
 script:
-  - export CI=true
-  - docker run rohitkhatri/react-app:dev npm run test
+  - docker run rohitkhatri/react-app:dev CI=true npm run test
 
 # deploy:
 #   provider: elasticbeanstalk
