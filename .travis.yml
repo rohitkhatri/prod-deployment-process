@@ -7,7 +7,7 @@ before_install:
 
 script:
   - export CI=true
-  - docker run rohitkhatri/react-app:dev npm run test -- --coverage
+  - docker run rohitkhatri/react-app:dev npm run test
 
 # deploy:
 #   provider: elasticbeanstalk
