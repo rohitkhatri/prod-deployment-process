@@ -6,4 +6,11 @@ before_install:
   - docker build -t rohitkhatri/react-app:dev -f Dockerfile.dev .
 
 script:
-  - docker run rohitkhatri/react-app:dev npm run test -- --coverage
+  - docker run rohitkhatri/react-app:dev npm run test -- --coverage --passWithNoTests
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region : "us-east-2"
+#   app: "react-app"
+#   env: "ReactApp-env"
+#   bucket_name: "elasticbeanstalk-us-east-2-635148058219"
